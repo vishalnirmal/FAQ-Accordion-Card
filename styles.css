@@ -1,0 +1,115 @@
+@import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap');
+body{
+    font-size: 12px;
+    font-family: 'Kumbh Sans', sans-serif;
+    background-image: linear-gradient(hsl(273, 75%, 66%), hsl(240, 73%, 65%));
+    background-repeat: no-repeat;
+    margin: 15.4% 0;
+}
+.accordian{
+    background-color: #fff;
+    width: 850px;
+    height: 460px;
+    margin: auto;
+    border-radius: 15px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 10px;
+    background-image: url("./images/bg-pattern-desktop.svg");
+    background-repeat: no-repeat;
+    background-size: 85%;
+    background-position: -385px -165px;
+    box-shadow: 0px 10px 40px hsl(237, 12%, 33%);
+}
+.image-section{
+    background-image: url("./images/illustration-woman-online-desktop.svg");
+    background-repeat: no-repeat;
+    background-position: -60px;
+    background-size: 96%;
+}
+.box{
+    width: 150px;
+    position: relative;
+    top: 190px;
+    left: -75px;
+}
+.faq-section{
+    margin: 55px 85px 20px 20px;
+}
+.faq-header{
+    color: black;
+    font-weight: 700;
+    font-size: 2rem;
+}
+.mobile-img{
+    display: none;
+}
+.faq{
+    border-bottom: 1px solid hsl(240, 5%, 91%);
+    margin-bottom: 5px;
+}
+.question-section{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.question-section:hover{
+    cursor: pointer;
+}
+.question{
+    font-weight: 400;
+}
+.answer{
+    display: none;
+    font-weight: 400;
+    margin: 0 15px 10px 0;
+    font-size: 0.75rem;
+    color: hsl(240, 6%, 50%);
+    line-height: 1.5;
+}
+.active .question{
+    color: black;
+    font-weight: 700;
+}
+.active img{
+    transform: rotate(180deg);
+    transition: 0.2s;
+}
+.active > .answer{
+    display: block;
+}
+@media (max-width: 1024px){
+    .accordian{
+        width: 350px;
+        height: 540px;
+        margin: 40% auto;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr;
+    }
+    .box{
+        display: none;
+    }
+    .image-section{
+        background-image: url("./images/bg-pattern-mobile.svg");
+        background-repeat: no-repeat;
+        background-size: 75%;
+        background-position: center -1px;
+    }
+    .mobile-img{
+        display: block;
+        background-image: url("./images/illustration-woman-online-mobile.svg");
+        background-repeat: no-repeat;
+        background-size: 85%;
+        height: 200px;
+        position: relative;
+        top: -46%;
+        left: 2%;
+    }
+    .faq-section{
+        margin: -130px 25px 10px;
+    }
+    .faq-header{
+        text-align: center;
+    }
+
+}
